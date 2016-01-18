@@ -1,3 +1,7 @@
+
+</body>
+</html>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -6,15 +10,17 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<img src="logo.png" alt="" id="logo">
+<a href="index.php"><img src="logo.png" alt="" id="logo"></a>
 <div id="kast" style="text-align:center;">
 <h1>Meliss broneering</h1>
+
+    <form action="insert.php" method="post">
 <p>Nimi</p>
-<input type="text">
+<input name="nimi" type="text">
     <p>Telf nr:</p>
-    <input type="text">
+    <input name="telf_nr" type="text">
     <p>E-mail</p>
-    <input type="text">
+    <input name="e_mail" type="text">
     <p>Inimeste arv</p>
     <input type="text">
     <p>Kuupäev ja kellaaeg</p>
@@ -28,6 +34,10 @@
     <br>
     <br>
 <button class="submit">Sisesta</button>
+    </form>
+    <br>
+    <br>
+    <a style="font-size: 12px; font-family:arial; color:blue; text-decoration:none;" href="admin.php">Admin login</a>
 </div>
 </body>
 </html>
