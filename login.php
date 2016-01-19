@@ -18,12 +18,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     // If result matched $myusername and $mypassword, table row must be 1 row
 
     if($count == 1) {
-        session_register("myusername");
-        $_SESSION['login_user'] = $myusername;
-
-        header("location: welcome.php");
-    }else {
-        $error = "Your Login Name or Password is invalid";
+        $_SESSION['myusername']=$myusername;
+        $_SESSION['mypassword']=$mypassword;
+        header("location:welcome.php");
+    }
+    else {
+        echo "Vale kasutajatunnus või parool!";
     }
 }
 ?>
