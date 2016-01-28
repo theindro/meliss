@@ -40,6 +40,11 @@ if(!isset($_SESSION['myusername'])){
 <th>Nimi</th>
 <th>Telf_nr</th>
 <th>E-mail</th>
+<th>Inimeste arv</th>
+<th>Kuupäev ja kellaaeg</th>
+<th>Eelroogade arv</th>
+<th>Põhiroogade arv</th>
+<th>Järelroogade arv</th>
 </tr>";
         // output data of each row
         while($row = $result->fetch_assoc()) {

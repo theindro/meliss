@@ -56,7 +56,7 @@ CREATE TABLE IF NOT EXISTS `broneering` (
 -- Andmete tõmmistamine tabelile `broneering`
 --
 
-INSERT INTO `broneering` (`broneering_id`, `klient_id`, `kuupäev_kellaaeg`, `inimeste_arv`) VALUES
+INSERT INTO `broneering` (`broneering_id`, `klient_id`, kuupaev_kellaaeg, `inimeste_arv`) VALUES
 (1, 1, '2016-01-06 12:00:00', 3);
 
 -- --------------------------------------------------------
@@ -98,7 +98,7 @@ CREATE TABLE IF NOT EXISTS `menu` (
 -- Andmete tõmmistamine tabelile `menu`
 --
 
-INSERT INTO `menu` (`menu_id`, `broneering_id`, `eelroogade_arv`, `põhiroogade_arv`, `järelroogade_arv`) VALUES
+INSERT INTO `menu` (`menu_id`, `broneering_id`, `eelroogade_arv`, pohiroogade_arv, jarelroogade_arv) VALUES
 (1, 1, 2, 3, 1);
 
 --

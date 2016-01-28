@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - meliss_restoran@localhost" uuid="8ed6b8ca-8101-444f-b6c0-92743b97d281">
+    <database-info product="MySQL" version="5.5.5-10.1.9-MariaDB" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <schema name="" catalog="meliss_restoran"/>
+    <table name="broneering" schema="" catalog="meliss_restoran" type="TABLE">
+      <column name="broneering_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="klient_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="kuupaev_kellaaeg" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="inimeste_arv" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="broneering_id"/>
+      <foreign-key name="broneering_ibfk_1" columns="klient_id" ref-table="klient" ref-schema="" ref-catalog="meliss_restoran" ref-columns="klient_id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="menu_ibfk_1" table="menu" schema="" catalog="meliss_restoran" columns="broneering_id"/>
+    </table>
+    <table name="klient" schema="" catalog="meliss_restoran" type="TABLE">
+      <column name="klient_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="nimi" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="telf_nr" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="e_mail" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="klient_id"/>
+      <exported-key name="broneering_ibfk_1" table="broneering" schema="" catalog="meliss_restoran" columns="klient_id"/>
+    </table>
+    <table name="menu" schema="" catalog="meliss_restoran" type="TABLE">
+      <column name="menu_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="broneering_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="eelroogade_arv" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="pohiroogade_arv" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="jarelroogade_arv" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="menu_id"/>
+      <foreign-key name="menu_ibfk_1" columns="broneering_id" ref-table="broneering" ref-schema="" ref-catalog="meliss_restoran" ref-columns="broneering_id" update-rule="3" delete-rule="3" deferrability="2"/>
+    </table>
+  </data-source>
+</component>

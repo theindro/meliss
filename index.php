@@ -1,7 +1,3 @@
-
-</body>
-</html>
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -22,9 +18,9 @@
     <p>E-mail *</p>
     <input name="e_mail" type="text">
     <p>Inimeste arv *</p>
-    <input type="text">
+    <input name="inimeste_arv" type="text">
     <p>Kuupäev ja kellaaeg * </p>
-    <select name="aeg" id="aeg">
+    <select name="kuupaev_kellaaeg" id="aeg">
         <option value="value">Vali kuupäev</option>
         <option value="value">19.01.2016 11:00</option>
         <option value="value">19.01.2016 12:00</option>
@@ -33,19 +29,19 @@
     <br>
     <br>
         <p>Eelroog | Põhiroog | Järelroog</p>
-        <select style="margin-right: 30px; width: 40px;" name="eelroog" id="eelroog">
+        <select style="margin-right: 30px; width: 40px;" name="eelroogade_arv" id="eelroog">
             <option value="value">--</option>
             <option value="value">1</option>
             <option value="value">2</option>
             <option value="value">3</option>
         </select>
-        <select style="width: 40px;" name="eelroog" id="eelroog">
+        <select style="width: 40px;" name="pohiroogade_arv" id="eelroog">
             <option value="value">--</option>
             <option value="value">1</option>
             <option value="value">2</option>
             <option value="value">3</option>
         </select>
-        <select style="margin-left: 30px; width: 40px;" name="eelroog" id="eelroog">
+        <select style="margin-left: 30px; width: 40px;" name="jarelroogade_arv" id="eelroog">
             <option value="value">--</option>
             <option value="value">1</option>
             <option value="value">2</option>
@@ -53,7 +49,7 @@
         </select>
         <br>
     <br>
-<button class="submit">Sisesta</button>
+<button class="submit" value="Submit">Sisesta</button>
     </form>
     <br>
     <a style="font-size: 12px; font-family:arial; color:blue; text-decoration:none;" href="login.php">Admin login</a>

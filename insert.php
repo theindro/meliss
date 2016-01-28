@@ -14,9 +14,15 @@ if (!$con)
 
 mysql_select_db("meliss", $con);
 
-$sql="
+$sql= "BEGIN;
 INSERT INTO klient (nimi, telf_nr, e_mail)
-VALUES ('$_POST[nimi]','$_POST[telf_nr]','$_POST[e_mail]')";
+VALUES ('$_POST[nimi]','$_POST[telf_nr]','$_POST[e_mail]');
+INSERT INTO broneering (inimeste_arv, kuupaev_kellaaeg)
+    VALUES ('$_POST[inimeste_arv]','$_POST[kuupaev_kellaaeg]');
+
+INSERT INTO menu (eelroogade_arv, pohiroogade_arv, jarelroogade_arv)
+    VALUES ('$_POST[eelroogade_arv]','$_POST[pohiroogade_arv]','$_POST[jarelroogade_arv]');
+COMMIT";
 
 if (!mysql_query($sql,$con))
 {
